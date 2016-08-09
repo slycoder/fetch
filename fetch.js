@@ -8,7 +8,8 @@
   var support = {
     searchParams: 'URLSearchParams' in self,
     iterable: 'Symbol' in self && 'iterator' in Symbol,
-    blob: 'FileReader' in self && 'Blob' in self && (function() {
+    // Disable blob support for now.
+    blob: false && 'FileReader' in self && 'Blob' in self && (function() {
       try {
         new Blob()
         return true
